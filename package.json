@@ -1,0 +1,27 @@
+{
+  "name": "eroskraper_sep24",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LdMe/eroskraper_sep24.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LdMe/eroskraper_sep24/issues"
+  },
+  "homepage": "https://github.com/LdMe/eroskraper_sep24#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jsdom": "^25.0.1"
+  }
+}
