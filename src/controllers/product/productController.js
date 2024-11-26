@@ -1,7 +1,8 @@
-
+import EroScraper from "../../utils/eroScraper.js";
+import ErosParser from "../../utils/erosParser.js";
 
 class ProductController{
-    constructor(products){
+    constructor(products=[]){
         this.products = [...products];
         this.LAST_PRODUCT_ID= this.products.length;
     }
@@ -41,8 +42,13 @@ class ProductController{
         const removedProduct = this.products.splice(index,1);
         return removedProduct[0];
     }
-    sayHello(){
-        console.log("hello");
+    async scrapProducts(query){
+        const eroScraper =  new EroScraper();
+        await eroScraper.init();
+        const html = await eroScraper.search(query);
+        const parser = new ErosParser(html);
+        const products = parser.getProducts();
+        return products;
     }
 }
 
